@@ -1,0 +1,32 @@
+{
+  "name": "nocscrape25",
+  "version": "1.0.0",
+  "description": "",
+  "main": "helper.js",
+  "type": "module",
+  "scripts": {
+    "runAllTests": "npx playwright test",
+    "runTestsInUI": "npx playwright test --ui",
+    "runTest01": "npx playwright test scrapes/01_writeCode.spec.js",
+    "runTest02": "npx playwright test scrapes/02_generateCode.spec.js",
+    "runTest03": "npx playwright test scrapes/03_callApi.spec.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "glados": "./glados.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.50.1",
+    "@types/node": "^22.13.4"
+  },
+  "dependencies": {
+    "@openrouter/ai-sdk-provider": "^0.2.2",
+    "ai": "^4.1.45",
+    "chalk": "^5.4.1",
+    "dotenv": "^16.4.7",
+    "inquirer": "^12.4.2",
+    "ora": "^8.2.0"
+  }
+}
