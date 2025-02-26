@@ -7,6 +7,8 @@ This document provides instructions on how to set up and run the NOCScrape25 pro
 - **Node.js:** Make sure you have Node.js installed (version 14 or later). You can download it from [https://nodejs.org/](https://nodejs.org/).
 - **Git:** You'll need Git to clone the repository.
 
+Test editor used in the demo will be VS Code.
+
 ## Installation Steps
 
 1.  **Create a Project Directory:**
@@ -40,7 +42,7 @@ This document provides instructions on how to set up and run the NOCScrape25 pro
 3.  **Install GlaDOS (_if you dare_)**
 
     ```bash
-    npm install
+    npm link
     ```
 
 4.  **Run the Tests:**

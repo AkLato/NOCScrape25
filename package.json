@@ -6,9 +6,10 @@
   "type": "module",
   "scripts": {
     "runAllTests": "npx playwright test",
+    "runCodegen": "npx playwright codegen",
     "runTestsInUI": "npx playwright test --ui",
-    "runTest01": "npx playwright test scrapes/01_writeCode.spec.js",
-    "runTest02": "npx playwright test scrapes/02_generateCode.spec.js",
+    "runTest01": "npx playwright test scrapes/01_generateCode.spec.js",
+    "runTest02": "npx playwright test scrapes/02_writeCode.spec.js",
     "runTest03": "npx playwright test scrapes/03_callApi.spec.js"
   },
   "keywords": [],
