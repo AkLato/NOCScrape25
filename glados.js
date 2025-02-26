@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { openrouter } from "@openrouter/ai-sdk-provider";
 import { generateText } from "ai";
 import inquirer from "inquirer";
