@@ -3,7 +3,7 @@
 // Then set up the filter to be configurable by passing a variable.
 import { test, expect } from "@playwright/test";
 
-test("Some test name", async ({ page }) => {
+test("Some test name to be changed", async ({ page }) => {
   let variableYouWantToPassIntoSteps;
 
   await test.step("This is the first step of many", async () => {

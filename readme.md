@@ -51,6 +51,8 @@ Text editor used in the demo will be VS Code.
     npm link
     ```
 
+    You can call GlaDOS anytime by typing `glados` into the terminal.
+
 4.  **Run the Tests:**
 
     Execute the tests using the following command:

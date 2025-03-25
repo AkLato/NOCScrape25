@@ -55,7 +55,7 @@ async function main() {
 
     try {
       const { text } = await generateText({
-        model: openrouter("anthropic/claude-3.7-sonnet"),
+        model: openrouter("anthropic/claude-3.7-sonnet"), // or deepseek/deepseek-chat
         prompt: `${SYSTEM_PROMPT}\n\nUser Question: ${question}`,
         headers: {
           Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
