@@ -7,7 +7,7 @@ This document provides instructions on how to set up and run the NOCScrape25 pro
 - **Node.js:** Make sure you have Node.js installed (version 14 or later). You can download it from [https://nodejs.org/](https://nodejs.org/).
 - **Git:** You'll need Git to clone the repository.
 
-Test editor used in the demo will be VS Code.
+Text editor used in the demo will be VS Code.
 
 ## Installation Steps
 
@@ -26,6 +26,12 @@ Test editor used in the demo will be VS Code.
     npm install
     ```
 
+    and initialize Playwright
+
+    ```bash
+    npm init playwright@latest
+    ```
+
         Select following options during installation:
         Need to install the following packages:
         create-playwright@1.17.135
@@ -33,11 +39,11 @@ Test editor used in the demo will be VS Code.
         Getting started with writing end-to-end tests with Playwright:
         Initializing project in '.'
         ✔ Do you want to use TypeScript or JavaScript? · JavaScript
-        ✔ Where to put your end-to-end tests? · Scrapes
+        ✔ Where to put your end-to-end tests? · scrapes
         ✔ Add a GitHub Actions workflow? (y/N) · false
         ✔ Install Playwright browsers (can be done manually via 'npx playwright install')? (Y/n) · true
-
-    Next you will create `.env` file in root of the project and add `OPENROUTER_API_KEY=TBD`
+        ✔ Install Playwright operating system dependencies (requires sudo / root - can be done manually via 'sudo npx playwright  install-deps')? (y/N) · false
+        ✔ .../NOCScrape25/playwright.config.js already exists. Override it? (y/N) · false
 
 3.  **Install GlaDOS (_if you dare_)**
 
@@ -54,6 +60,8 @@ Test editor used in the demo will be VS Code.
     ```
 
     Playwright will launch Chromium, run the tests, and display the results in your terminal. A Playwright HTML report will be generated after running all tests. This can be opened in your browser.
+
+    VS Code specific - check the NPM Scripts in EXPLORER menu (three dots next to EXPLORER on the top left section) and scripts defined in package.json will appear on the bottom, it is a useful way to run the scripts using the mouse.
 
 ## Project Structure
 

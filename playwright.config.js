@@ -1,11 +1,13 @@
 // @ts-check
 import { defineConfig, devices } from "@playwright/test";
+import dotenv from "dotenv";
 
+dotenv.config();
 /**
  * @see https://playwright.dev/docs/test-configuration
  */
 export default defineConfig({
-  testDir: "./Scrapes",
+  testDir: "./scrapes",
   reporter: "html",
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
@@ -19,7 +21,7 @@ export default defineConfig({
       use: {
         ...devices["Desktop Chrome"],
         ignoreHTTPSErrors: true,
-        headless: false,
+        headless: false, // some pages are more stable when the browser is headed
       },
     },
   ],

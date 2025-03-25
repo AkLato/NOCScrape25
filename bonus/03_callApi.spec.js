@@ -1,7 +1,11 @@
 import { test, expect } from "@playwright/test";
 
+// Let's change the approach and ditch the UI completely. TheMovieDB provides a nice API
+// so we can accomplish the same task faster.
+
 // API documentation can be found at https://developer.themoviedb.org/reference/discover-movie
-// Authorization is: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4NjJiN2JmYjM1YmE1MWUzMWEyYmZiOWRmZDdjNDJmYSIsIm5iZiI6MTc0MDA0NDA0OS4zNzMsInN1YiI6IjY3YjZmNzExYjNmOGZiMjdjNDFhMDA0ZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.46Z2j5z2qjW-UKQl8ebFwRQo0tk5iWVk4T6OJ1vms1U"
+// Authorization key is in .env as TMDB_API_KEY
+
 test("Find movies via TMDB's GET /discover/movie endpoint", async ({
   request,
 }) => {
@@ -24,8 +28,7 @@ test("Find movies via TMDB's GET /discover/movie endpoint", async ({
       {
         headers: {
           Accept: "application/json",
-          Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4NjJiN2JmYjM1YmE1MWUzMWEyYmZiOWRmZDdjNDJmYSIsIm5iZiI6MTc0MDA0NDA0OS4zNzMsInN1YiI6IjY3YjZmNzExYjNmOGZiMjdjNDFhMDA0ZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.46Z2j5z2qjW-UKQl8ebFwRQo0tk5iWVk4T6OJ1vms1U",
+          Authorization: process.env.TMDB_API_KEY,
         },
       }
     );
