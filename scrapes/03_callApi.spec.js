@@ -2,7 +2,7 @@
 // so we can accomplish the same task faster.
 
 // API documentation can be found at https://developer.themoviedb.org/reference/discover-movie
-// Authorization key is in .env as TMDB_API_KEY
+// Authorization key is in .env file as TMDB_API_KEY
 
 import { test, expect } from "@playwright/test";
 

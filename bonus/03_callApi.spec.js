@@ -1,11 +1,10 @@
-import { test, expect } from "@playwright/test";
-
 // Let's change the approach and ditch the UI completely. TheMovieDB provides a nice API
 // so we can accomplish the same task faster.
 
 // API documentation can be found at https://developer.themoviedb.org/reference/discover-movie
-// Authorization key is in .env as TMDB_API_KEY
+// Authorization key is in .env file as TMDB_API_KEY
 
+import { test, expect } from "@playwright/test";
 test("Find movies via TMDB's GET /discover/movie endpoint", async ({
   request,
 }) => {
