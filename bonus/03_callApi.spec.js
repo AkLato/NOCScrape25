@@ -15,7 +15,6 @@ test("Find movies via TMDB's GET /discover/movie endpoint", async ({
 
   await test.step("Set filter parameters", async () => {
     params = new URLSearchParams({
-      page: "1",
       primary_release_year: "2020",
       sort_by: "popularity.desc",
       "vote_average.gte": "8",
@@ -28,7 +27,7 @@ test("Find movies via TMDB's GET /discover/movie endpoint", async ({
       {
         headers: {
           Accept: "application/json",
-          Authorization: process.env.TMDB_API_KEY,
+          Authorization: `Bearer ${process.env.TMDB_API_KEY}`,
         },
       }
     );
