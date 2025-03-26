@@ -21,7 +21,7 @@ test("Find movies via TMDB's GET /discover/movie endpoint", async ({
   await test.step("Send request to API", async () => {
     // Save the GET call response to a variable, you know the url, the params and don't forget about headers
     // Good practice is to assert on the response to know whether it was sucessful
-    let response = await request.get("", { headers: {} });
+    let response = await request.get(``, { headers: {} });
 
     responseBody = await response.json();
   });

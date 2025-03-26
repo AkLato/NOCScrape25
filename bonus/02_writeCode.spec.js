@@ -1,6 +1,6 @@
-// Nobody wants to spend time watching movie streaming recomendations, those movies are junk!
-// Create a movie recommendation engine that will querry imdb.com and gives you list of movies to watch
-// based on filters you select, like yer of release and minimum rating.
+// Let's learn about well structured code. Take the solution from first task
+// and use test steps to organize and anotate what was done.
+// Then set up the filter to be configurable by passing a variable.
 
 import { test, expect } from "@playwright/test";
 
